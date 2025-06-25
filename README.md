@@ -1,95 +1,75 @@
 # 🛍️ Online Shoppers Purchasing Intention
 
-Un projet de Machine Learning pour prédire si un utilisateur effectuera un achat en ligne en se basant sur son comportement de navigation. Le pipeline utilise **Random Forest** et **SVM**, avec des résultats visualisés dans un **dashboard interactif construit avec Tableau Desktop**.
+A machine learning project to predict whether an online user will make a purchase based on their browsing behavior. The pipeline uses **Decision Tree** and **SVM** models, with results visualized in an **interactive dashboard built with Tableau Desktop**.
 
----
-
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 OnlineShoppersML/
 ├── data/
-│   └── online_shoppers_intention.csv      # Données originales
+│   └── online_shoppers_intention.csv          # Original dataset
 ├── notebooks/
-│   ├── 01_preprocessing_and_training.ipynb # Prétraitement + Modèles
+│   ├── 01_data_preprocessing.ipynb             # Data cleaning, encoding, and splitting
+│   └── 02_model_training.ipynb                  # Training and evaluation of Decision Tree & SVM models
 ├── models/
-│   ├── rf_model.pkl                        # Modèle Random Forest enregistré
-│   └── svm_model.pkl                       # Modèle SVM enregistré
+│   ├── dt_model.pkl                            # Saved Decision Tree model
+│   └── svm_model.pkl                           # Saved SVM model
 ├── dashboards/
-│   └── tableau_dashboard.twbx              # Dashboard Tableau Desktop
+│   └── tableau_dashboard.twbx                   # Tableau Desktop dashboard
 ├── requirements.txt
 └── README.md
 ```
 
----
+## 🎯 Project Goals
 
-## 🎯 Objectifs du Projet
+* Preprocess the Kaggle Online Shoppers Purchasing Intention dataset
+* Train two classification models:
 
-* Prétraiter le dataset Kaggle sur l'intention d’achat
-* Entraîner deux modèles de classification :
+  * ✅ **Decision Tree**
+  * ✅ **Support Vector Machine (SVM)**
+* Evaluate model performances
+* Visualize results (ROC curves, confusion matrices, etc.)
+* Present insights and predictions in a **Tableau Dashboard**
 
-  * ✅ **Random Forest**
-  * ✅ **SVM (Support Vector Machine)**
-* Évaluer leurs performances
-* Visualiser les résultats (courbes, matrices)
-* Présenter les insights et les prédictions dans un **Tableau Dashboard**
+## ⚙ Technologies Used
 
----
+| Component        | Tools / Libraries                                                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Language         | Python 3.x                                                                                                                                |
+| Machine Learning | Scikit-learn                                                                                                                              |
+| Visualization    | Matplotlib, Seaborn                                                                                                                       |
+| Dashboard        | Tableau Desktop (.twbx)                                                                                                                   |
+| Notebook         | Jupyter Notebook                                                                                                                          |
+| Dataset          | [Online Shoppers Purchasing Intention (Kaggle)](https://www.kaggle.com/datasets/imakash3011/online-shoppers-purchasing-intention-dataset) |
 
-## ⚙ Technologies Utilisées
+## 🚀 How to Run
 
-| Composant        | Outils / Bibliothèques                                                                                                         |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Langage          | Python 3.x                                                                                                                     |
-| Machine Learning | Scikit-learn                                                                                                                   |
-| Visualisation    | Matplotlib, Seaborn                                                                                                            |
-| Dashboard        | Tableau Desktop (.twbx)                                                                                                        |
-| Notebook         | Jupyter Notebook                                                                                                               |
-| Dataset          | [Online Shoppers Intention (Kaggle)](https://www.kaggle.com/datasets/imakash3011/online-shoppers-purchasing-intention-dataset) |
-
----
-
-## 🚀 Lancement du Pipeline
-
-### 1. Installer les dépendances
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Exécuter le notebook
+### 2. Run the notebooks in order
 
-Lance le fichier `notebooks/01_preprocessing_and_training.ipynb`. Il effectue :
+* Run `notebooks/01_data_preprocessing.ipynb`
+  *(Data cleaning, encoding, and train/test splitting)*
 
-* Nettoyage et encodage des données
-* Séparation en jeu d'entraînement/test
-* Entraînement des deux modèles
-* Évaluation (accuracy, F1, ROC, confusion matrix)
-* Sauvegarde des modèles (`models/`)
-* Export des prédictions au format `.csv` pour Tableau
+* Run `notebooks/02_model_training.ipynb`
+  *(Training, evaluation of Decision Tree and SVM, model saving, exporting predictions to CSV for Tableau)*
 
----
+## 🧠 Models Used
 
-## 🧠 Modèles Utilisés
+| Model            | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| Decision Tree    | Interpretable model, effective for rule-based data |
+| SVM (RBF Kernel) | Powerful classifier for non-linear data separation |
 
-| Modèle           | Description                                       |
-| ---------------- | ------------------------------------------------- |
-| Random Forest    | Ensemble robuste, évite le surapprentissage       |
-| SVM (RBF Kernel) | Classifieur efficace pour séparation non-linéaire |
+## 📈 Tableau Dashboard
 
----
-
-## 📈 Dashboard Tableau
-
-Le fichier `dashboards/tableau_dashboard.twbx` contient :
-
-* La prédiction finale de chaque session (issue du modèle choisi)
-* Des filtres dynamiques : par mois, type de visiteur, région, etc.
-* Des graphiques : taux de conversion, importance des variables, comparaison SVM vs RF
-
-> 📤 Le tableau est alimenté par un fichier `.csv` exporté depuis le notebook (`predictions.csv`).
-
----
+* File: `dashboards/tableau_dashboard.twbx`
+* Visualizations: Session-level predictions, conversion rates, dynamic filters by month, visitor type, region, etc.
+* Data: CSV file exported from the notebook (`predictions.csv`)
 
 ## 📋 requirements.txt
 
@@ -102,10 +82,6 @@ seaborn
 jupyter
 ```
 
----
-
-## 📄 Licence
+## 📄 License
 
 MIT License
-
----
