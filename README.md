@@ -5,7 +5,7 @@ A machine learning project to predict whether an online user will make a purchas
 ## 📁 Project Structure
 
 ```
-OnlineShoppersML/
+ONLINE-SHOPPERS-PURCHASE-PREDICTION/
 ├── data/
 │   └── online_shoppers_intention.csv          # Original dataset
 ├── notebooks/
