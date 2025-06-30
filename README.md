@@ -8,17 +8,9 @@ Un projet de machine learning visant à prédire si un visiteur en ligne effectu
 
 ONLINE-SHOPPERS-PURCHASE-PREDICTION/
 ├── data/
-│   └── online_shoppers_intention.csv          # Dataset original
 ├── notebooks/
-│   ├── 01_data_preprocessing.ipynb             # Nettoyage, encodage, et séparation train/test
-│   └── 02_model_training.ipynb                  # Entraînement et évaluation des modèles Arbre de Décision & SVM
-├── models/  
-│   ├── dt_model.pkl            # Modèle Arbre de Décision sauvegardé  
-│   ├── svm_model.pkl           # Modèle SVM sauvegardé  
-│   ├── rf_model.pkl            # Modèle Random Forest sauvegardé  
-│   └── logreg_model.pkl        # Modèle Régression Logistique sauvegardé  
-├── dashboards/
-│   └── tableau_dashboard.twbx                   # Dashboard Tableau Desktop
+├── models/   
+├── dashboard/
 ├── requirements.txt
 └── README.md
 
@@ -90,6 +82,7 @@ scikit-learn
 matplotlib
 seaborn
 jupyter
+joblib
 ```
 
 ## 📄 Licence
