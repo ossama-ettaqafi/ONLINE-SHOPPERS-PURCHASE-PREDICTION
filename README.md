@@ -5,40 +5,41 @@ Un projet de machine learning visant à prédire si un visiteur en ligne effectu
 ## 📁 Structure du projet
 
 ```
+ONLINE-SHOPPERS-PURCHASE-PREDICTION/
 .
-├── LICENSE
-├── README.md
-├── requirements.txt
-├── dashboard
-│   ├── dashboard_capture.png
-│   └── tableau_dashboard.twbx
-├── data
-│   └── online_shoppers_intention.csv
-├── models
+├── LICENSE                            # Fichier de licence du projet
+├── README.md                         # Documentation et présentation du projet
+├── requirements.txt                  # Liste des dépendances Python requises
+├── dashboard                        # Dossier contenant les fichiers du tableau de bord
+│   ├── dashboard_capture.png         # Capture d'écran ou image du tableau de bord
+│   └── tableau_dashboard.twbx        # Fichier du tableau de bord Tableau
+├── data                             # Dossier des données brutes ou originales
+│   └── online_shoppers_intention.csv  # Dataset principal utilisé dans le projet
+├── models                           # Modèles d'apprentissage automatique sauvegardés
 │   ├── decision_tree_model.joblib
 │   ├── logistic_regression_model.joblib
 │   ├── random_forest_model.joblib
 │   └── svm_model.joblib
-└── notebooks
-    ├── 01_data_preprocessing.ipynb
-    ├── 02_model_training.ipynb
-    ├── 03_tableau_visualisation.ipynb
-    ├── cleaned_data.csv
-    ├── predictions_decision_tree.csv
-    ├── predictions_dt.csv
-    ├── predictions_logistic_regression.csv
-    ├── predictions_rf.csv
-    ├── predictions_svm.csv
-    ├── test_set.csv
-    ├── train_set.csv
-    ├── train_set_balanced.csv
-    ├── .ipynb_checkpoints
+└── notebooks                        # Notebooks Jupyter et fichiers associés
+    ├── 01_data_preprocessing.ipynb          # Notebook pour le nettoyage et prétraitement des données
+    ├── 02_model_training.ipynb               # Notebook pour l’entraînement et l’évaluation des modèles
+    ├── 03_tableau_visualisation.ipynb        # Notebook pour la visualisation avec Tableau
+    ├── cleaned_data.csv                       # Dataset nettoyé après prétraitement
+    ├── predictions_decision_tree.csv         # Prédictions issues du modèle arbre de décision
+    ├── predictions_dt.csv                     # Variante ou doublon des prédictions arbre de décision
+    ├── predictions_logistic_regression.csv   # Prédictions du modèle régression logistique
+    ├── predictions_rf.csv                     # Prédictions du modèle random forest
+    ├── predictions_svm.csv                    # Prédictions du modèle SVM
+    ├── test_set.csv                           # Dataset de test au format CSV
+    ├── train_set.csv                          # Dataset d’entraînement au format CSV
+    ├── train_set_balanced.csv                 # Dataset d’entraînement équilibré (ex: SMOTE)
+    ├── .ipynb_checkpoints                     # Sauvegardes automatiques des notebooks
     │   ├── 01_data_preprocessing-checkpoint.ipynb
     │   ├── 02_model_training-checkpoint.ipynb
     │   ├── 03_tableau_visualisation-checkpoint.ipynb
     │   └── cleaned_data-checkpoint.csv
-    └── images
-        └── logo.png
+    └── images                                # Dossier contenant les images utilisées dans les notebooks ou documentation
+        └── logo.png                          # Logo du projet
 ````
 
 ## 🎯 Objectifs du projet
