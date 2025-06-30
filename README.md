@@ -64,7 +64,7 @@ Dans ce projet, plusieurs modèles ont été explorés pour prédire l’intenti
 | **Support Vector Machine (SVM)**          | Classifieur puissant utilisant un noyau RBF pour gérer la séparation non linéaire des classes.              |
 | **Régression Logistique (class_weight='balanced')** | Utilisée pour gérer le déséquilibre des classes, servant de baseline robuste.                                |
 | **Random Forest**                         | Ensemble d’arbres de décision pour plus de robustesse, testé avec gestion du déséquilibre par pondération.  |
-| **Techniques de rééchantillonnage** (SMOTE, undersampling) (Plus tard) | Appliquées pour corriger le déséquilibre et améliorer la détection de la classe minoritaire (acheteurs).   |
+| **Techniques de rééchantillonnage** (SMOTE, undersampling) | Appliquées pour corriger le déséquilibre et améliorer la détection de la classe minoritaire (acheteurs).   |
 
 ## ⚙ Technologies utilisées
 
@@ -97,7 +97,6 @@ pip install -r requirements.txt
 
 * Fichier : `dashboards/tableau_dashboard.twbx`
 * Visualisations : Prédictions par session, taux de conversion, filtres dynamiques par mois, type de visiteur, région, etc.
-* Données : fichier CSV exporté depuis le notebook (`predictions.csv`)
 
 ## 📋 requirements.txt
 
