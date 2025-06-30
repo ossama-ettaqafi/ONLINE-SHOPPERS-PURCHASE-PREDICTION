@@ -5,15 +5,40 @@ Un projet de machine learning visant à prédire si un visiteur en ligne effectu
 ## 📁 Structure du projet
 
 ```
-
-ONLINE-SHOPPERS-PURCHASE-PREDICTION/
-├── data/
-├── notebooks/
-├── models/   
-├── dashboard/
+.
+├── LICENSE
+├── README.md
 ├── requirements.txt
-└── README.md
-
+├── dashboard
+│   ├── dashboard_capture.png
+│   └── tableau_dashboard.twbx
+├── data
+│   └── online_shoppers_intention.csv
+├── models
+│   ├── decision_tree_model.joblib
+│   ├── logistic_regression_model.joblib
+│   ├── random_forest_model.joblib
+│   └── svm_model.joblib
+└── notebooks
+    ├── 01_data_preprocessing.ipynb
+    ├── 02_model_training.ipynb
+    ├── 03_tableau_visualisation.ipynb
+    ├── cleaned_data.csv
+    ├── predictions_decision_tree.csv
+    ├── predictions_dt.csv
+    ├── predictions_logistic_regression.csv
+    ├── predictions_rf.csv
+    ├── predictions_svm.csv
+    ├── test_set.csv
+    ├── train_set.csv
+    ├── train_set_balanced.csv
+    ├── .ipynb_checkpoints
+    │   ├── 01_data_preprocessing-checkpoint.ipynb
+    │   ├── 02_model_training-checkpoint.ipynb
+    │   ├── 03_tableau_visualisation-checkpoint.ipynb
+    │   └── cleaned_data-checkpoint.csv
+    └── images
+        └── logo.png
 ````
 
 ## 🎯 Objectifs du projet
@@ -83,6 +108,7 @@ matplotlib
 seaborn
 jupyter
 joblib
+imblearn
 ```
 
 ## 📄 Licence
